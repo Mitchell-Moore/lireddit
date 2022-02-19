@@ -6,7 +6,7 @@ import { Field, Int, ObjectType } from 'type-graphql';
 export class Post {
   @Field(() => Int)
   @PrimaryKey()
-  _id!: number;
+  id!: number;
 
   @Field(() => String)
   @Property()
