@@ -58,7 +58,7 @@ export class UserResolver {
     if (options.username.length <= 2) {
       return {
         errors: [
-          { field: 'username', message: 'lenght must be greather than 2' },
+          { field: 'username', message: 'length must be greater than 2' },
         ],
       };
     }
@@ -77,10 +77,10 @@ export class UserResolver {
       };
     }
 
-    if (options.password.length <= 3) {
+    if (options.password.length <= 2) {
       return {
         errors: [
-          { field: 'password', message: 'lenght must be greather than 3' },
+          { field: 'password', message: 'length must be greater than 2' },
         ],
       };
     }

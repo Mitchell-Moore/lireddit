@@ -32,8 +32,8 @@ const main = async () => {
       cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 365 * 10, //10 Years
         httpOnly: true,
-        secure: true, //cookie only works in https
-        sameSite: 'none',
+        secure: __prod__, //cookie only works in https
+        sameSite: 'lax',
       },
       saveUninitialized: false,
       secret: 'keyboard cat',
@@ -41,7 +41,7 @@ const main = async () => {
     })
   );
 
-  app.set('trust proxy', true);
+  app.set('trust proxy', __prod__);
 
   app.use(
     cors({
