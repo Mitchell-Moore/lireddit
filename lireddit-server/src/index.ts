@@ -46,8 +46,7 @@ const main = async () => {
   app.use(
     cors({
       credentials: true,
-      // origin: 'https://studio.apollographql.com',
-      origin: 'http://localhost:3000',
+      origin: ['http://localhost:3000', 'https://studio.apollographql.com'],
     })
   );
 

@@ -110,7 +110,10 @@ export class UserResolver {
     const valid = await argon2.verify(user.password, options.password);
     if (!valid) {
       return {
-        errors: [{ field: 'username/password', message: 'invalid login' }],
+        errors: [
+          { field: 'username', message: 'invalid login' },
+          { field: 'password', message: 'invalid login' },
+        ],
       };
     }
 
